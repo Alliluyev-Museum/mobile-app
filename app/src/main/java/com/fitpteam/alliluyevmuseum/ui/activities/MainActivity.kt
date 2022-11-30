@@ -51,7 +51,9 @@ private fun RoomCard(room: Room) {
         modifier = Modifier
             .padding(8.dp)
             .clickable {
-                context.startActivity(Intent(context, RoomActivity::class.java))
+                val intent = Intent(context, RoomActivity::class.java)
+                intent.putExtra(context.getString(R.string.room_name_key), room.name)
+                context.startActivity(intent)
             }) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,

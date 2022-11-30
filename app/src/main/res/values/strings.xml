@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Alliluyev Museum</string>
+    <string name="room_name_key">roomName</string>
+    <string name="exhibit_name_key">exhibitName</string>
+    <string name="exhibit_description_key">exhibitDescription</string>
+    <string name="empty_exhibit_name">Экспонат не найден</string>
+    <string name="empty_exhibit_description">Описание отсутствует</string>
 </resources>

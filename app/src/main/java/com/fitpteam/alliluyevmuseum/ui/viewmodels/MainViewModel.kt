@@ -7,10 +7,9 @@ import com.fitpteam.alliluyevmuseum.models.Room
 
 class MainViewModel : ViewModel() {
     val roomsList = mutableStateOf(listOf(
-        Room("Комната 1", Uri.parse("1")),
-        Room("Комната 2", Uri.parse("1")),
-        Room("Комната 3", Uri.parse("1")),
-        Room("Комната 4", Uri.parse("1")),
-        Room("Комната 5", Uri.parse("1"))
+        Room("Комната 1"),
+        Room("Комната 2"),
+        Room("Комната 3"),
+        Room("Комната 4"),
     ))
 }
