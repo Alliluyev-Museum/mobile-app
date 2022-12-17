@@ -11,6 +11,20 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/ThemeActionBar</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/ThemeActionBar</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+
+    <style name="ThemeActionBar"
+        parent="Widget.Material3.Light.ActionBar.Solid">
+        <item name="titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/black</item>
     </style>
 </resources>
