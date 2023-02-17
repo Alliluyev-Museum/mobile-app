@@ -2,7 +2,6 @@ package com.fitpteam.alliluyevmuseum.database
 
 import android.app.Application
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import com.fitpteam.alliluyevmuseum.models.Exhibit
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

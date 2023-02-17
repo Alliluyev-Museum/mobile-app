@@ -12,6 +12,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.fitpteam.alliluyevmuseum.ui.screens.AboutScreen
 import com.fitpteam.alliluyevmuseum.ui.screens.ExhibitScreen
 import com.fitpteam.alliluyevmuseum.ui.screens.HomeScreen
 import com.fitpteam.alliluyevmuseum.ui.screens.RoomScreen
@@ -57,14 +58,19 @@ private fun MainScreen() {
         startDestination = NavRoutes.Home.route,
     ) {
         composable(NavRoutes.Home.route) {
-            HomeScreen { roomId -> navController.navigate(NavRoutes.Room.route + "/$roomId") }
+            HomeScreen ({ roomId -> navController.navigate(NavRoutes.Room.route + "/$roomId") },
+                { navController.navigate(NavRoutes.About.route) })
+        }
+
+        composable(NavRoutes.About.route) {
+            AboutScreen(onBackPress)
         }
 
         composable(NavRoutes.Room.route+"/{roomId}") { backStackEntry ->
             val roomId = backStackEntry.arguments?.getString("roomId")
             RoomScreen(
                 roomId!!.toInt(),
-                { id, name, description, roomId ->  navController.navigate(NavRoutes.Exhibit.route + "/$id/$name/$description/$roomId")},
+                { id, name, description, roomId -> navController.navigate(NavRoutes.Exhibit.route + "/$id/$name/$description/$roomId")},
                 onBackPress)
         }
 

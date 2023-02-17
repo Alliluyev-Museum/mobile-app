@@ -1,7 +1,6 @@
 package com.fitpteam.alliluyevmuseum.ui.viewmodels
 
 import android.content.res.Resources
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.APPLICATION_KEY
